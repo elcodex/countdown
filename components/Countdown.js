@@ -32,9 +32,13 @@ function Countdown(props) {
     return (
         <div className="countdown">
             <Text text={props.text} textClassName="countdown__text"/>
-            <p>Hours: {hours}</p>
-            <p>Minutes: {minutes}</p>
-            <p>Seconds: {seconds}</p>
+            <div className="countdown__parts">
+                <CountdownPart value={hours} valueText="hours" partClassName="countdown__part"/>
+                <Splitter />
+                <CountdownPart value={minutes} valueText="minutes" partClassName="countdown__part"/>
+                <Splitter />
+                <CountdownPart value={seconds} valueText="seconds" partClassName="countdown__part"/>
+            </div>
         </div>
     );
 }
