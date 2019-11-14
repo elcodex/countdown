@@ -1,0 +1,29 @@
+.countdown {
+    margin: 20px auto;
+    max-width: 20%;
+}
+
+.countdown__text {
+    width: 100%;
+    padding: 10px;
+}
+
+.countdown__parts {
+    display: flex;
+}
+
+.countdown__part {
+    text-align: center;
+    line-height: 1.4;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.part__splitter {
+    margin-bottom: 1.4rem;
+}
+
+.countdown__part > div:first-of-type, .part__splitter {
+    font-size: 2rem;
+}
