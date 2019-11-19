@@ -1,11 +1,26 @@
 function Countdown(props) {
+    const getLeftHours = leftMilliseconds =>
+        Math.floor(leftMilliseconds / 60 / 60 / 1000);
+    const getLeftMinutes = leftMilliseconds =>
+        Math.floor(leftMilliseconds / 60 / 1000) % 60;
+    const getLeftSeconds = leftMilliseconds =>
+        Math.floor(leftMilliseconds / 1000) % 60;
+
     let utcDate = Date.parse(props.date);
+    let leftHours = 0;
+    let leftMinutes = 0;
+    let leftSeconds = 0;
+
     const leftMilliseconds = utcDate - Date.now();
- 
-    let [hours, setHours] = React.useState(0);
-    let [minutes, setMinutes] = React.useState(0);
-    let [seconds, setSeconds] = React.useState(0);
+    if (!isNaN(leftMilliseconds) && leftMilliseconds > 0) {
+        leftHours = getLeftHours(leftMilliseconds);
+        leftMinutes = getLeftMinutes(leftMilliseconds);
+        leftSeconds = getLeftSeconds(leftMilliseconds);
+    }
     
+    let [hours, setHours] = React.useState(leftHours);
+    let [minutes, setMinutes] = React.useState(leftMinutes);
+    let [seconds, setSeconds] = React.useState(leftSeconds);   
 
     let intervalId = null;
     React.useEffect(() => {
@@ -21,9 +36,9 @@ function Countdown(props) {
                 clearInterval(intervalId);
                 return;
             }
-            setHours(Math.floor(leftMilliseconds / 60 / 60 / 1000));
-            setMinutes(Math.floor(leftMilliseconds / 60 / 1000) % 60);
-            setSeconds(Math.floor(leftMilliseconds / 1000) % 60);
+            setHours(getLeftHours(leftMilliseconds));
+            setMinutes(getLeftMinutes(leftMilliseconds));
+            setSeconds(getLeftSeconds(leftMilliseconds));
         }, 1000);
 
         //return () => clearInterval(intervalId);
