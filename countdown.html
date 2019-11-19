@@ -8,22 +8,28 @@
   </head>
 
   <body>
-    <div>
-      <label>
-        Text for countdown:
-        <input type="text" value="">
-      </label>
-      <label>
-        Event date (format YYYY-MM-DD if not specified): <input type="date">
-      </label>
-      <label>
-        Event time in format hh:mm: <input type="time">
-      </label>
-      <button>Update text</button>
+    <div class="container">
+
+      <div class="user-settings"> 
+        <div class="inputs">
+          <label for="countdown-text">Text for countdown:</label>
+          <input id="countdown-text" type="text" value="" autofocus>
+          
+          <label for="countdown-date">Event date (format YYYY-MM-DD if not specified):</label>
+          <input id="countdown-date" type="date">
+          
+          <label for="countdown-time">Event time in format hh:mm:</label>
+          <input id="countdown-time" type="time">
+          
+          <button>Update component</button>
+        </div>
+        <div class="inputs-log">
+        </div>  
+      </div>
+
+      <div id="countdown-wrapper"></div>
     </div>
 
-    <div id="countdown-wrapper"></div>
-    
     <script src="http://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="http://unpkg.com/react@16/umd/react.production.min.js"></script> 
     <script src="http://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
@@ -33,7 +39,5 @@
     <script src="components/Countdown.js" type="text/babel"></script>
     <script src="components/Splitter.js" type="text/babel"></script>
     <script src="app.js" type="text/babel"></script>
-
-    <script src="scripts/main.js"></script>
   </body>
 </html>  
