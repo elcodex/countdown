@@ -1,15 +1,9 @@
 
-let App = props => 
-    <Countdown
-      date={props.date}
-      text={props.text}
-    />
-
 document.querySelector('button').addEventListener('click', () => {
     const text = document.querySelector("input[type='text']").value;
     const date = document.querySelector("input[type='date']").value;
     const time = document.querySelector("input[type='time']").value;
-    const timeZone = ''; //document.querySelector("input.timeZone").value;
+    const timeZone = document.querySelector("#countdown-timezone").value;
 
     const utcString = new Date(`${date} ${time}${timeZone}`).toUTCString();
     console.log(date, time, utcString);
@@ -27,6 +21,7 @@ const initialValues = (text, dateString, timeString, timeZoneString) => {
     document.querySelector("input[type='text']").value = text;
     document.querySelector("input[type='date']").value = dateString;
     document.querySelector("input[type='time']").value = timeString;
+    document.querySelector("#countdown-timezone").value = timeZoneString;
 
     const utcString = new Date(`${dateString} ${timeString}${timeZoneString}`).toUTCString();
     ReactDOM.render(
