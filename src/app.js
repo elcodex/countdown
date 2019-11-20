@@ -3,14 +3,9 @@ import ReactDOM from 'react-dom';
 
 import Countdown from './components/Countdown.js';
 
-document.querySelector('button').addEventListener('click', () => {
-    const text = document.querySelector("input[type='text']").value;
-    const date = document.querySelector("input[type='date']").value;
-    const time = document.querySelector("input[type='time']").value;
-    const timeZone = document.querySelector("#countdown-timezone").value;
-
+let renderCountdownComponent = (text, date, time, timeZone) => {
     const utcString = new Date(`${date} ${time}${timeZone}`).toUTCString();
-    console.log(date, time, utcString);
+    //console.log(date, time, utcString);
 
     ReactDOM.render(
         <Countdown 
@@ -19,22 +14,24 @@ document.querySelector('button').addEventListener('click', () => {
         />, 
         document.getElementById('countdown-wrapper')
     );
-});
-
-const initialValues = (text, dateString, timeString, timeZoneString) => {
-    document.querySelector("input[type='text']").value = text;
-    document.querySelector("input[type='date']").value = dateString;
-    document.querySelector("input[type='time']").value = timeString;
-    document.querySelector("#countdown-timezone").value = timeZoneString;
-
-    const utcString = new Date(`${dateString} ${timeString}${timeZoneString}`).toUTCString();
-    ReactDOM.render(
-        <Countdown 
-            text={text}
-            date={utcString}    
-        />, 
-        document.getElementById('countdown-wrapper')
-    );
 }
 
-initialValues('Advent Of Code will start at', '2019-12-01', '00:00', '-05:00');
+document.querySelector('button').addEventListener('click', () => {
+    const text = document.getElementById("countdown-text").value;
+    const date = document.getElementById("countdown-date").value;
+    const time = document.getElementById("countdown-time").value;
+    const timeZone = document.getElementById("countdown-timezone").value;
+
+    renderCountdownComponent(text, date, time, timeZone);
+});
+
+const initialValues = (text, date, time, timeZone) => {
+    document.getElementById("countdown-text").value = text;
+    document.getElementById("countdown-date").value = date;
+    document.getElementById("countdown-time").value = time;
+    document.getElementById("countdown-timezone").value = timeZone;
+
+    renderCountdownComponent(text, date, time, timeZone);
+}
+
+initialValues('Advent Of Code will start in', '2019-12-01', '00:00', '-05:00');
