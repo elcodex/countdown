@@ -1,1 +1,24 @@
 @import 'user-settings.css';
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 20px;
+}
+
+.container {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 2rem;
+}
+
+#countdown-wrapper {
+    flex: 5 0 320px;
+    text-align: center;
+}
