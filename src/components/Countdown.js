@@ -41,7 +41,7 @@ function Countdown(props) {
             setSeconds(getLeftSeconds(leftMilliseconds));
         }, 1000);
 
-        //return () => clearInterval(intervalId);
+        return () => clearInterval(intervalId);
     });
 
     return (
