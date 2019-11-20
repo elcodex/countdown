@@ -13,7 +13,7 @@
     display: flex;
 }
 
-.countdown__part {
+.countdown__part, .part__splitter {
     text-align: center;
     /*line-height: 1.4;*/
     flex: 1;
@@ -21,8 +21,8 @@
     flex-direction: column;
 }
 
-.part__splitter {
-    margin-bottom: 1.4rem;
+.part__splitter > div:last-of-type {
+    height: calc(1.4 * 0.7rem);
 }
 
 .countdown__part > div:first-of-type, .part__splitter {
