@@ -1,4 +1,7 @@
-function CountdownPart(props) {
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+export default function CountdownPart(props) {
 
     const formattedNumber = number => {
         const prefix = number < 10 ? '0' : '';

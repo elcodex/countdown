@@ -1,4 +1,11 @@
-function Countdown(props) {
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Text from './Text.js';
+import CountdownPart from './CountdownPart.js';
+import Splitter from './Splitter.js';
+
+export default function Countdown(props) {
     const getLeftHours = leftMilliseconds =>
         Math.floor(leftMilliseconds / 60 / 60 / 1000);
     const getLeftMinutes = leftMilliseconds =>

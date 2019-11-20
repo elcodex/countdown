@@ -1,3 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Countdown from './components/Countdown.js';
 
 document.querySelector('button').addEventListener('click', () => {
     const text = document.querySelector("input[type='text']").value;
