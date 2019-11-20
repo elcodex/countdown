@@ -1,20 +1,21 @@
 .countdown {
-    margin: 20px auto;
-    max-width: 20%;
+    display: inline-block;
 }
 
 .countdown__text {
     width: 100%;
     padding: 10px;
+    text-align: center;
 }
 
 .countdown__parts {
+   /* width: max-content;*/
     display: flex;
 }
 
 .countdown__part {
     text-align: center;
-    line-height: 1.4;
+    /*line-height: 1.4;*/
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -25,5 +26,10 @@
 }
 
 .countdown__part > div:first-of-type, .part__splitter {
-    font-size: 2rem;
+    font-size: 5rem;
+}
+
+.countdown__part > div:last-of-type {
+    text-transform: uppercase;
+    font-size: 0.7rem;
 }
