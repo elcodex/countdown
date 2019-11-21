@@ -35,11 +35,10 @@ export default function Countdown(props) {
         
         intervalId = setInterval(() => {
             const leftMilliseconds = utcDate - Date.now();
-            if (leftMilliseconds <= 0) {
+            if (isNaN(leftMilliseconds) || leftMilliseconds <= 0) {
                 setHours(0);
                 setMinutes(0);
                 setSeconds(0);
-                console.log(intervalId);
                 clearInterval(intervalId);
                 return;
             }
