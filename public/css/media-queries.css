@@ -1,0 +1,29 @@
+@media only screen and (max-width: 768px) {
+    .user-settings {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 90%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    #countdown-wrapper {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .countdown__part > div:first-of-type, .part__splitter {
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .countdown__part > div:first-of-type, .part__splitter {
+        font-size: 2.5rem;
+    }
+}
