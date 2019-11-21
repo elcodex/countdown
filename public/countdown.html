@@ -11,14 +11,20 @@
 
   <body>
     <div class="container">
-
-      <div class="user-settings"> 
+      <div class="menu-settings display-none">
+        <button id="btn-open">Settings</button>
+      </div>
+      
+      <div class="user-settings display-flex">
+        <div class="menu">
+          <button id="btn-close">Close</button>
+        </div>
         <div class="inputs">
           <label for="countdown-text">Text for countdown:</label>
           <input id="countdown-text" type="text" value="" autofocus>
           
           <label for="countdown-date">Event date:</label>
-          <input id="countdown-date" type="dat2e" placeholder="YYYY-MM-DD">
+          <input id="countdown-date" type="date" placeholder="YYYY-MM-DD">
           
           <label for="countdown-time">Event time:</label>
           <input id="countdown-time" type="time" placeholder="HH:MM">
@@ -26,7 +32,7 @@
           <label for="countdown-timezone">Event time zone:</label>
           <input id="countdown-timezone" type="text" placeholder="[+|-]HH:MM">
           
-          <button>Update component</button>
+          <button id="btn-update">Update component</button>
         </div>
         <div class="inputs-log">
         </div>  
@@ -36,5 +42,6 @@
     </div>
 
     <script src="bundle.js"></script>
+   
   </body>
 </html>  
