@@ -43,6 +43,23 @@ html {
     display: block;
 }
 
+button:focus {
+    border: 2px solid var(--color);
+}
+
+button {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--background-color);
+    background-color: var(--color);
+    border: 2px solid var(--border-color);
+}
+
+button:active {
+    background-color: var(--background-color);
+    color: var(--color);
+}
 #btn-open {
     margin-left: 0.5rem;
 }
