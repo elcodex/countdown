@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import Text from './Text.js';
 import CountdownPart from './CountdownPart.js';
