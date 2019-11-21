@@ -10,6 +10,12 @@ html {
 }
 
 .container {
+    --color: rgb(72, 61, 55);
+    --background-color: #FDF8F5;
+    --border-color: rgba(72, 61, 55, 0.3);
+
+    font-family: 'PT Sans', 'Segoe UI', 'Verdana', 'Helvetica', sans;
+
     height: 90vh;
     display: flex;
     flex-direction: row;
