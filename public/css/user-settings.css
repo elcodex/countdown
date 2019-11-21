@@ -1,11 +1,21 @@
 .user-settings {
     flex: 1 0 320px;
     width: 30%;
+    
     line-height: 1.5;
-    --color: rgb(72, 61, 55);
-    --background-color: #FDF8F5;
-    --border-color: rgba(72, 61, 55, 0.3);
-    padding: 1rem;
+    padding: 0 0.5rem;
+    height: 100%;
+    background-color: var(--background-color);
+    /*display: flex;*/
+    flex-direction: column;
+}
+
+.inputs {
+    justify-self: center;
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+}
+.menu {
+    align-self: flex-end;
 }
 
 label, input, button {
@@ -19,7 +29,7 @@ label {
 
 input {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
     line-height: 1.5;
     font-size: 1rem;
     box-sizing: border-box;

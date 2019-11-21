@@ -19,12 +19,30 @@ html {
     height: 90vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: flex-start;
-    margin: 0 2rem;
+    margin: 0;
+
+    position: relative;
 }
 
 #countdown-wrapper {
-    flex: 5 0 320px;
+    flex: 5 0 5rem;
     text-align: center;
+    align-self: center;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.display-block {
+    display: block;
+}
+
+#btn-open {
+    margin-left: 0.5rem;
 }
