@@ -48,6 +48,7 @@ button:focus {
 }
 
 button {
+    display: block;
     margin: 0.5rem 0;
     font-size: 1rem;
     padding: 0.5rem 1rem;
@@ -60,6 +61,12 @@ button:active {
     background-color: var(--background-color);
     color: var(--color);
 }
+
+button:focus, button:active {
+    outline-color: var(--color);
+    -webkit-tap-highlight-color: transparent;
+}
+
 #btn-open {
     margin-left: 0.5rem;
 }

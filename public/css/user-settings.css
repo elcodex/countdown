@@ -18,7 +18,7 @@
     align-self: flex-end;
 }
 
-label, input, button {
+label, input {
     display: block;
     color: var(--color);
 }
@@ -33,12 +33,12 @@ input {
     line-height: 1.5;
     font-size: 1rem;
     box-sizing: border-box;
-}
-
-input {
     border: 2px solid var(--border-color);
 }
 
 input:focus {
     border: 2px solid var(--color);
+    box-shadow: 0px 1px 2px var(--color);
+
+    outline-color: var(--color);
 }
