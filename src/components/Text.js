@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Text(props) {
+export default function Text({text, textClassName}) {
     return (
-        <div className={props.textClassName}>
-            {props.text}
+        <div className={textClassName}>
+            {text}
         </div>
     );
 }

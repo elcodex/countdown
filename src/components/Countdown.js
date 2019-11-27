@@ -4,7 +4,7 @@ import Text from './Text.js';
 import CountdownPart from './CountdownPart.js';
 import Splitter from './Splitter.js';
 
-export default function Countdown(props) {
+export default function Countdown({date, text}) {
     const getLeftHours = leftMilliseconds =>
         Math.floor(leftMilliseconds / 60 / 60 / 1000);
     const getLeftMinutes = leftMilliseconds =>
@@ -12,7 +12,7 @@ export default function Countdown(props) {
     const getLeftSeconds = leftMilliseconds =>
         Math.floor(leftMilliseconds / 1000) % 60;
 
-    let utcDate = Date.parse(props.date);
+    let utcDate = Date.parse(date);
     let leftHours = 0;
     let leftMinutes = 0;
     let leftSeconds = 0;
@@ -51,7 +51,7 @@ export default function Countdown(props) {
 
     return (
         <div className="countdown">
-            <Text text={props.text} textClassName="countdown__text"/>
+            <Text text={text} textClassName="countdown__text"/>
             <div className="countdown__parts">
                 <CountdownPart value={hours} valueText="hours" partClassName="countdown__part"/>
                 <Splitter />

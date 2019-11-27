@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CountdownPart(props) {
+export default function CountdownPart({value, valueText, partClassName}) {
 
     const formattedNumber = number => {
         const prefix = number < 10 ? '0' : '';
@@ -8,12 +8,12 @@ export default function CountdownPart(props) {
     }
 
     return (
-        <div className={props.partClassName}>
+        <div className={partClassName}>
             <div>
-                {formattedNumber(props.value)}
+                {formattedNumber(value)}
             </div>
             <div>
-                {props.valueText}
+                {valueText}
             </div>
         </div>
     );
