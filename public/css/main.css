@@ -1,7 +1,7 @@
 @import 'user-settings.css';
 
 html, body {
-    min-height: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -47,7 +47,7 @@ button:focus {
     border: 2px solid var(--color);
 }
 
-button {
+.container button {
     display: block;
     margin: 0.5rem 0;
     font-size: 1rem;
@@ -69,4 +69,16 @@ button:focus, button:active {
 
 #btn-open {
     margin-left: 0.5rem;
+}
+
+.links {
+    height: 6vh;
+    padding: 15px 0 5px;
+    line-height: 7vh;
+    text-align: center;
+    vertical-align: center;
+}
+.links img {
+    height: 80%;
+    width: auto;
 }
