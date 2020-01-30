@@ -53,4 +53,4 @@ const initialValues = (text, date, time, timeZone) => {
     renderCountdownComponent(text, date, time, timeZone);
 }
 
-initialValues('Countdown before spring', '2020-03-01', '00:00', '-05:00');
+initialValues('Countdown till spring', '2020-03-01', '00:00', '-05:00');
